@@ -11,7 +11,8 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
+  string: py_{{ PKG_BUILDNUM }}
   entry_points:
     - sacremoses=sacremoses.cli:cli
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
