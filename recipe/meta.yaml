@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3 
   string: py_{{ PKG_BUILDNUM }}
   entry_points:
     - sacremoses=sacremoses.cli:cli
@@ -21,6 +21,9 @@ requirements:
   host:
     - pip {{ pip }}
     - python
+    # Use pins to control cos6/cos7 match
+    - libgcc-ng  {{ libgcc }}
+    - libstdcxx-ng  {{ libstdcxx }}
   run:
     - click {{ click }}
     - joblib {{ joblib }}
@@ -30,6 +33,10 @@ requirements:
     - tqdm {{ tqdm }}
 
 test:
+  requires:
+    # Use pins to control cos6/cos7 match
+    - libgcc-ng  {{ libgcc }}
+    - libstdcxx-ng  {{ libstdcxx }}
   imports:
     - sacremoses
 
