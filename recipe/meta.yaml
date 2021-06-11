@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 3 
+  number: 3
   string: py_{{ PKG_BUILDNUM }}
   entry_points:
     - sacremoses=sacremoses.cli:cli
