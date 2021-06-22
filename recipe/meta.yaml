@@ -1,5 +1,5 @@
 {% set name = "sacremoses" %}
-{% set version = "0.0.43" %}
+{% set version = "0.0.45" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 123c1bf2664351fb05e16f87d3786dbe44a050cfd7b85161c09ad9a63a8e2948
+  sha256: 58176cc28391830789b763641d0f458819bebe88681dac72b41a19c0aedc07e9
 
 build:
   noarch: python
-  number: 2
+  number: 1
   string: py_{{ PKG_BUILDNUM }}
   entry_points:
     - sacremoses=sacremoses.cli:cli
