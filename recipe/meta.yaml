@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   number: 2
-  string: h{{ PKG_HASH }}py_{{ PKG_BUILDNUM }}
+  string: pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}
   entry_points:
     - sacremoses=sacremoses.cli:cli
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
