@@ -1,0 +1,14 @@
+tests:
+  - name: Setup sacremoses Tests
+    command: |
+        conda install -y git
+        git clone https://github.com/alvations/sacremoses
+        cd sacremoses
+        git checkout 01d5c73        
+        conda install -y pytest
+  - name: Run sacremoses tests
+    command: |
+        pytest -v -k test
+  - name: Clean tests
+    command: |
+        rm -rf sacremoses
